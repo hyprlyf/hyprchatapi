@@ -7,7 +7,7 @@ app.use(express.json({limit: '50mb'}));
 app.post('/chittiApi', async (req, res)=>{
 	try{
 		const modelMap = {
-			'hyprlyf/hyprV.1':'x-ai/grok-4-fast:free',
+			'hyprlyf/hyprV.1':'deepseek/deepseek-chat-v3.1:free',
 		};
 		const userModel = req.body.model || 'hyprlyf/hyprV.1';
 		const realModel = modelMap[userModel];
